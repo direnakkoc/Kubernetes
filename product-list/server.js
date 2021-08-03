@@ -9,11 +9,12 @@ module.exports = (opts) => {
 
   fastify.get('/products', async (request, reply) => {
     const auth = request.headers['authorization']
+    console.log(auth)
     if (!auth) {
       return reply.code(401).send({ status: 'Unauthorized' })
     }
     const token = auth.split(' ')[1]
-
+    console.log(token)
     // TODO: Check timestamp
     console.log('token was not found')
     try{

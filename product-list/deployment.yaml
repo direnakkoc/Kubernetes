@@ -5,7 +5,7 @@ metadata:
   labels:
     app: product-list
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: product-list
@@ -17,6 +17,6 @@ spec:
       containers:
       - name: product-list
         imagePullPolicy: Never
-        image: direnakkoc/product-list:latest
+        image: direnakkoc/product-list:1.5
         ports:
         - containerPort: 3000
